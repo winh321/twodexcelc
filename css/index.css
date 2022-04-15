@@ -1,0 +1,54 @@
+body{
+    background-color: #e1bee7;
+    margin: 0px;
+    padding: 0px;}
+   
+   .logo{
+    width: 15%;
+   
+}
+.logo-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position:absolute;
+    z-index: -1;
+    right:0;
+    bottom: 0;
+    top:0;
+    left:0;
+}
+table{
+    min-height: 0px;
+}
+
+h3{
+    color:blueviolet
+}
+#date,select,button{
+    padding: 4px;
+    font-size: 120%;
+    border: 2px solid blueviolet;
+    color:blueviolet;
+   
+}
+h2{
+    text-align: center;
+    padding: 8px;
+    color:azure;
+    background-color: blueviolet;
+}
+.logo-container div{
+    text-align: center;
+}
+
+.logo-container div button{
+    text-align: center;
+    background-color: blueviolet;
+    color:aliceblue;
+    border-radius: 25px;
+}
+.keyboard{
+    border: 2px solid blueviolet;
+}

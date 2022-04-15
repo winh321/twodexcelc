@@ -1,0 +1,142 @@
+body{
+    padding: 0px;
+    margin:0px;
+}
+th{
+    background-color: blueviolet;
+    color: white;
+    padding-left:8px;
+    padding-right:8px;
+    border:1px solid white;
+    width: 80px;
+    margin:4px;
+
+}
+
+td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6),td:nth-child(7),td:nth-child(8){
+    text-align: center;
+}
+
+th:nth-child(1){
+    background-color: blueviolet;
+    color: white;
+    padding-left:8px;
+    padding-right:8px;
+    border:1px solid white;
+    width:25px;
+    margin:4px;
+}
+
+
+
+
+td{
+background-color:white;
+padding-left:8px;
+padding-right:8px;
+width: 50px;
+border: none;
+margin:4px;}
+
+
+.container{    
+    display: flex;
+    flex-direction:row;
+    align-items:flex-start;
+    justify-content: space-around;
+}
+.table{
+
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: space-around;
+    overflow-y :scroll;
+    height:700px;
+
+}
+
+td img{
+    width: 15px;
+}
+.table,.add{
+    margin: 4px; 
+    padding: 4px; 
+}
+.table{
+        flex-grow:1;
+
+}
+
+.add,.keyboard{
+    flex-grow:8;
+    align-items: center;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;  
+}
+.table-header{
+    background-color: blueviolet;
+    color: aliceblue;
+    padding: 16px; 
+}
+.table-header span{
+    border:2px solid white;
+    padding:8px;
+}
+
+span{
+    text-align: center;
+}
+input[type="text"],input[type="number"]{
+    color: blueviolet;
+    border-radius: 15px;
+    padding: 8px;
+    border:2px solid blueviolet;
+    text-align: center;
+    width:100px;
+}
+
+input[type="text"]:hover,input[type="number"]:hover{
+    color: blueviolet;
+    border-radius: 15px;
+    padding: 8px;
+    border:3px solid rgb(8, 153, 86);
+    text-align: center;
+}
+input[type="button"]{
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 8px;
+    border:2px solid blueviolet;
+    text-align: center;
+    width:60px;
+}
+input[type="button"]:active{
+    color:white;
+    padding:2px;
+   background-color: blueviolet;
+    border:4px solid white;
+}
+input[type="button"]:hover{
+padding:6px;
+
+}
+
+.keyboard{
+    border:2px solid blueviolet;
+    padding: 20px;
+    background-color: blueviolet;
+    border-radius: 25px;
+}
+
+.btn-bottom input[type="button"]{
+    width:100px
+}
+#total{
+width: 300px;
+}
+.total{
+    text-align: center;
+}
