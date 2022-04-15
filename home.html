@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/index.css">
+
+    <style>
+        .logo-container{
+            border:8px solid blueviolet;
+            min-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 50px;">
+
+    </div>
+    <h2 id="d"></h2>
+    <div class="logo-container">
+        <div>
+
+    <input type="date" onchange="change()" id="date" value="2022-05-02">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <select onchange="change()" id="opt">
+        <option value="မနက်ပိုင်း">မနက်ပိုင်း</option>
+        <option value="ညနေပိုင်း">ညနေပိုင်း</option>
+        <option value="မနက်ပိုင်းအပို">မနက်ပိုင်းအပို</option>
+        <option value="ညနေပိုင်းအပို">ညနေပိုင်းအပို</option>
+    </select>
+  <br>
+  <br>
+ 
+  <button onclick="nex();"> Ready </button>
+  <br>
+  <br>
+  <p style="color: blueviolet;">
+      Project ဖန်တီးရန် နေ့ရက်နှင့်အချိန်ကို  ရွေးပါ။
+    <br>အဆင်မပြေပါက ဖုန်း-09950141131ကို ဆက်သွယ်ပေးပါ။
+  </p>
+        </div>
+
+   </div>
+<script>
+    var data = document.getElementById("date")
+    //define zero plus method
+    let str= (date)=>{
+        if(date.toString().length == 1){
+            date= "0"+date
+        }
+        return date
+    }
+
+   var today = new Date();
+   var day = today.getDate();
+   var month = today.getMonth() + 1;
+   var year = today.getFullYear();
+   var h = today.getHours();
+if(h>12){
+    setS("opt","ညနေပိုင်း")
+}else{
+    setS("opt","မနက်ပိုင်း")
+}
+
+
+ 
+let y =  year+"-"+str(month)+"-"+str(day)
+document.getElementById("date").value = y
+change(y)
+
+  
+function change  () {
+    var x= data.value;
+    var a = x.substring(0,x.indexOf("-"))
+    var b = x.substring(x.indexOf("-")+1,x.lastIndexOf("-"))
+    var c = x.substring(x.lastIndexOf("-")+1,x.length)
+    x = c+"-"+b+"-"+a
+
+
+  document.getElementById("d").innerHTML = x+"-"+parts()
+}
+
+function parts(){
+    var sel = document.getElementById("opt")
+    var select = sel.options[sel.selectedIndex];
+    var clr = select.getAttribute("value")
+   return clr
+}
+
+function setS(id,val){
+    document.getElementById(id).value = val
+
+}
+function nex(){
+localStorage.setItem("2dexcel_name",document.getElementById("d").innerText)
+window.location = window.location="adddata.html"
+}
+
+
+</script>
+</body>
+</html>
