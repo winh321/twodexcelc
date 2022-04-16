@@ -92,10 +92,10 @@ span{
 input[type="text"],input[type="number"]{
     color: blueviolet;
     border-radius: 15px;
-    padding: 8px;
+    padding: 4px;
     border:2px solid blueviolet;
     text-align: center;
-    width:100px;
+    width:60px;
 }
 
 input[type="text"]:hover,input[type="number"]:hover{
