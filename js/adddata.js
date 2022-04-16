@@ -91,9 +91,13 @@ var addTo= (name,no,amount,type,total)=>{
     var ans = JSON.stringify(d)
     localStorage.setItem(filename,ans) 
     show()
+    cl()
+}
+function cl(){
     name.value = ""
     no.value = ""
     amount.value = ""
+
 }
 
 function del(){
