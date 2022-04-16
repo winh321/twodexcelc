@@ -74,7 +74,17 @@ function st(str){
 }
 
 function coop(){
-var data = text.value
-alert(data)
+var data = text
+/* Get the text field */
+var copyText = data
+
+/* Select the text field */
+copyText.select();
+copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+/* Copy the text inside the text field */
+navigator.clipboard.writeText(copyText.value);
+
+alert("copied successful!")
 }
 
